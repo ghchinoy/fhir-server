@@ -1,6 +1,6 @@
 # FHIR Docker
 
-MITRE's Intervention Engine FHIR server in a Docker container
+MITRE's [Intervention Engine FHIR server](https://github.com/intervention-engine/fhir) in a Docker container
 
 ## Installation
 
