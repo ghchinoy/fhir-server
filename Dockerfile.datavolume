@@ -1,0 +1,9 @@
+#
+# MongoDB Data Volume Container
+#
+FROM centos:latest
+MAINTAINER G. Hussain Chinoy <ghchinoy@gmail.com>
+
+RUN mkdir /data && mkdir /data/db
+
+CMD ls -lh /data/db && /bin/echo "Data volume ready."

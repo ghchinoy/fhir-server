@@ -1,0 +1,15 @@
+#
+# MITRE Intervention Engine FHIR Server
+# 
+FROM golang
+MAINTAINER G. Hussain Chinoy <ghchinoy@gmail.com>
+
+# https://github.com/intervention-engine/fhir.git
+RUN git clone https://github.com/intervention-engine/fhir.git /go/src/github.com/intervention-engine/fhir
+COPY ./server.go /go/src/github.com/intervention-engine/fhir/server.go
+
+RUN cd /go/src/github.com/intervention-engine/fhir && go get && go install
+
+ENTRYPOINT /go/bin/fhir
+
+EXPOSE 3001
